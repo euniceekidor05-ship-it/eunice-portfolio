@@ -1,0 +1,363 @@
+/* ----- RESET & BASE ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: #0b0b0b;
+    color: #f0f0f0;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    padding-top: 80px;
+}
+
+/* ----- FIXED NAVBAR ----- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #121212;
+    border-bottom: 1px solid #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px;
+    z-index: 999;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.5);
+}
+
+.logo h2 {
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 1.8rem;
+}
+
+.logo span {
+    color: #f97316;
+}
+
+.nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #dddddd;
+    font-weight: 500;
+    font-size: 1.2rem;
+    transition: color 0.2s ease;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #f97316;
+    border-bottom-color: #f97316;
+}
+
+/* ----- SECTIONS ----- */
+section {
+    padding: 80px 20px;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+/* HOME SECTION */
+.sectionOne {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sectionOne .divOne {
+    flex: 1 1 300px;
+}
+
+.sectionOne .divOne h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #ccc;
+}
+
+.sectionOne .divOne h3 span {
+    color: #f97316;
+}
+
+.sectionOne .divOne h1 {
+    font-size: 3rem;
+    margin: 15px 0 20px;
+    line-height: 1.2;
+}
+
+.sectionOne .divOne h1 span {
+    color: #f97316;
+    display: block;
+    font-size: 3.2rem;
+}
+
+.sectionOne .divOne p {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+    margin: 25px 0 35px;
+    max-width: 550px;
+}
+
+.btn-cv {
+    background: transparent;
+    border: 2px solid #f97316;
+    padding: 14px 36px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.btn-cv a {
+    text-decoration: none;
+    color: #f97316;
+}
+
+.btn-cv:hover {
+    background: #f97316;
+}
+
+.btn-cv:hover a {
+    color: #0b0b0b;
+}
+
+.sectionOne .divTwo {
+    flex: 1 1 250px;
+    text-align: center;
+}
+
+.sectionOne .divTwo img {
+    max-width: 100%;
+    width: 320px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    border: 4px solid #2a2a2a;
+    box-shadow: 0 20px 30px -10px rgba(249, 115, 22, 0.2);
+}
+
+/* ABOUT SECTION */
+.sectionTwo {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sectionTwo .divOne {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1 1 300px;
+}
+
+.about-text h1 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    border-left: 6px solid #f97316;
+    padding-left: 20px;
+}
+
+.about-text p {
+    font-size: 1.25rem;
+    color: #c0c0c0;
+    background: #1b1b1b;
+    padding: 30px;
+    border-radius: 24px;
+    line-height: 1.6;
+}
+
+.about-text strong {
+    color: #f97316;
+}
+
+.sectionTwo .divTwo {
+    flex: 0 0 280px;
+}
+
+.sectionTwo .divTwo img {
+    width: 100%;
+    border-radius: 30px;
+    border: 3px solid #f97316;
+    transform: rotate(2deg);
+    transition: 0.2s;
+}
+
+.sectionTwo .divTwo img:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+/* SERVICES SECTION */
+.sectionThree {
+    background: #0f0f0f;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sectionThree .divOne h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 60px;
+    color: white;
+}
+
+.sectionThree .divOne h1::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: #f97316;
+    margin: 16px auto 0;
+    border-radius: 4px;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.service-card {
+    background: #1c1c1c;
+    border-radius: 28px;
+    padding: 35px 25px;
+    flex: 1 1 260px;
+    max-width: 320px;
+    border-bottom: 6px solid transparent;
+    transition: all 0.2s ease;
+    box-shadow: 0 10px 20px -8px #00000080;
+}
+
+.service-card:hover {
+    border-bottom-color: #f97316;
+    transform: translateY(-8px);
+}
+
+.service-card h3 {
+    color: #f97316;
+    font-size: 1.9rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.service-card ul {
+    list-style: none;
+}
+
+.service-card li {
+    color: #ccc;
+    padding: 8px 0 8px 28px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23f97316" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>') left center no-repeat;
+    background-size: 18px;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    text-align: center;
+    background: #0a0a0a;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-container h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.contact-container p {
+    font-size: 1.3rem;
+    margin: 30px 0;
+    color: #aaa;
+}
+
+.contact-email {
+    display: inline-block;
+    border: 2px solid #f97316;
+    background: transparent;
+    color: #f97316;
+    padding: 16px 40px;
+    border-radius: 60px;
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.contact-email:hover {
+    background: #f97316;
+    color: black;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 700px) {
+    .navbar {
+        padding: 16px 20px;
+        flex-wrap: wrap;
+    }
+    
+    .nav-links {
+        gap: 20px;
+    }
+    
+    .nav-links a {
+        font-size: 1rem;
+    }
+    
+    .sectionOne .divOne h1 {
+        font-size: 2.4rem;
+    }
+    
+    .sectionOne .divOne h1 span {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        justify-content: center;
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .nav-links {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    body {
+        padding-top: 130px;
+    }
+    
+    .sectionOne .divOne h1 {
+        font-size: 2rem;
+    }
+    
+    .sectionOne .divOne h1 span {
+        font-size: 2.2rem;
+    }
+    
+    .about-text h1 {
+        font-size: 2.2rem;
+    }
+}
